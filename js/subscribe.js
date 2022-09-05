@@ -56,57 +56,57 @@
             console.log('bind events');
             
             //스크롤 다운시 하단 이벤트 발생!
-            // window.addEventListener('scroll', function(){
-            //     self.sec2Img.setAttribute('src','/images/sec2_prod_02_mo.png')
-            //     self.$allDiv.removeClass("on");
-            //     self.$allImg.removeClass("on");
+            window.addEventListener('scroll', function(){
+                self.sec2Img.setAttribute('src','/images/sec2_prod_02_mo.png')
+                self.$allDiv.removeClass("on");
+                self.$allImg.removeClass("on");
 
 
-            //     const sec1T = self.$section1.offset().top,
-            //           sec1H = self.$section1.outerHeight(),
-            //           sec2T = self.$section2.offset().top,
-            //           sec2H = self.$section2.outerHeight(),
-            //           sec3T = self.$section3.offset().top,
-            //           sec3H = self.$section3.outerHeight(),
-            //           sec4T = self.$section4.offset().top,
-            //           sec4H = self.$section4.outerHeight(),
-            //           sec5T = self.$section5.offset().top,
-            //           sec5H = self.$section5.outerHeight(),
-            //           wH = $(window).height(),
-            //           wS = $(this).scrollTop();
+                const sec1T = self.$section1.offset().top,
+                      sec1H = self.$section1.outerHeight(),
+                      sec2T = self.$section2.offset().top,
+                      sec2H = self.$section2.outerHeight(),
+                      sec3T = self.$section3.offset().top,
+                      sec3H = self.$section3.outerHeight(),
+                      sec4T = self.$section4.offset().top,
+                      sec4H = self.$section4.outerHeight(),
+                      sec5T = self.$section5.offset().top,
+                      sec5H = self.$section5.outerHeight(),
+                      wH = $(window).height(),
+                      wS = $(this).scrollTop();
 
 
-            //     if (wS > (sec1T+sec1H-wH)){
-            //         self.sec1Text.classList.add('on');
+                if (wS > (sec1T+sec1H-wH)){
+                    self.sec1Text.classList.add('on');
 
-            //         for(let i=0; i<self.sec1Img.length; i++) {
-            //             self.sec1Img[i].classList.add('on');
-            //         }
-            //         //console.log('섹션1 실행')
-            //     } 
-            //     if (wS > (sec2T+sec2H-wH)){
-            //         self.sec2Img.classList.add('on');
-            //         if(self.sec2Img.classList.contains('on')){
-            //             self.sec2Img.setAttribute('src','/images/sec2_prod_02_on.png')
-            //         }
-            //         //console.log('섹션2 실행')
-            //     }
-            //     if (wS > (sec3T+sec3H-wH)) {
-            //         for(let i=0; i<self.sec3Img.length; i++) {
-            //             self.sec3Img[i].classList.add('on');
-            //         }
-            //         //console.log('섹션3 실행')
-            //     }
-            //     if (wS > (sec4T+sec4H-wH)) {
-            //         for(let i=0; i<self.sec4Img.length; i++) {
-            //             self.sec4Img[i].classList.add('on');
-            //         }
-            //         //console.log('섹션4 실행')
-            //     }
-            //     if (wS > (sec5T+sec5H-wH)) {
-            //         self.sec5Img.classList.add('on');
-            //     }
-            // })
+                    for(let i=0; i<self.sec1Img.length; i++) {
+                        self.sec1Img[i].classList.add('on');
+                    }
+                    //console.log('섹션1 실행')
+                } 
+                if (wS > (sec2T+sec2H-wH)){
+                    self.sec2Img.classList.add('on');
+                    if(self.sec2Img.classList.contains('on')){
+                        self.sec2Img.setAttribute('src','/images/sec2_prod_02_on.png')
+                    }
+                    //console.log('섹션2 실행')
+                }
+                if (wS > (sec3T+sec3H-wH)) {
+                    for(let i=0; i<self.sec3Img.length; i++) {
+                        self.sec3Img[i].classList.add('on');
+                    }
+                    //console.log('섹션3 실행')
+                }
+                if (wS > (sec4T+sec4H-wH)) {
+                    for(let i=0; i<self.sec4Img.length; i++) {
+                        self.sec4Img[i].classList.add('on');
+                    }
+                    //console.log('섹션4 실행')
+                }
+                if (wS > (sec5T+sec5H-wH)) {
+                    self.sec5Img.classList.add('on');
+                }
+            })
         },
     }
     subscribe.init();
