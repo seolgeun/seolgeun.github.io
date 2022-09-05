@@ -84,16 +84,13 @@
                     }
                     //console.log('섹션1 실행')
                 } 
-
                 if (wS > (sec2T+sec2H-wH)){
                     self.sec2Img.classList.add('on');
                     if(self.sec2Img.classList.contains('on')){
                         self.sec2Img.setAttribute('src','/images/sec2_prod_02_on.png')
                     }
                     //console.log('섹션2 실행')
-                } 
-                
-                
+                }
                 if (wS > (sec3T+sec3H-wH)) {
                     for(let i=0; i<self.sec3Img.length; i++) {
                         self.sec3Img[i].classList.add('on');
@@ -106,8 +103,9 @@
                     }
                     //console.log('섹션4 실행')
                 }
-
-                if (wS > (sec5T+sec5H-wH)) {
+                if ((wS - 50) > (sec5T+sec5H-wH)) {
+                    console.log(wS);
+                    console.log("테스트",sec5T+sec5H-wH);
                     self.sec5Img.classList.add('on');
                 }
             })
