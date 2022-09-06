@@ -47,64 +47,57 @@
         bindEvents : function() {
             const self = this;
             console.log('bind events');
-
-            var isFlag = false;
-
+            let timer;
+            
             //스크롤 다운시 하단 이벤트 발생!
-            window.addEventListener('scroll', function(){
-                
+            document.addEventListener('scroll', function(){
+                            
+                const   sec1T = self.$section1.offset().top,
+                        sec1H = self.$section1.outerHeight(),
+                        sec2T = self.$section2.offset().top,
+                        sec2H = self.$section2.outerHeight(),
+                        sec3T = self.$section3.offset().top,
+                        sec3H = self.$section3.outerHeight(),
+                        sec4T = self.$section4.offset().top,
+                        sec4H = self.$section4.outerHeight(),
+                        wH = $(window).height(),
+                        wS = $(this).scrollTop();
+
                 self.sec2Img.setAttribute('src','/images/sec2_prod_02_mo.png')
                 self.$allDiv.removeClass("on");
                 self.$allImg.removeClass("on");
 
-
-                const sec1T = self.$section1.offset().top,
-                      sec1H = self.$section1.outerHeight(),
-                      sec2T = self.$section2.offset().top,
-                      sec2H = self.$section2.outerHeight(),
-                      sec3T = self.$section3.offset().top,
-                      sec3H = self.$section3.outerHeight(),
-                      sec4T = self.$section4.offset().top,
-                      sec4H = self.$section4.outerHeight(),
-                      wH = $(window).height(),
-                      wS = $(this).scrollTop();
-
+                if(timer) {
+                    clearTimeout(timer);
+                }
                 
-                // if (wS > (sec1T+sec1H-wH) && wS < (sec2T+sec2H-wH)){
+                timer = setTimeout(() => {                
+                    if (wS > (sec1T+sec1H-wH) && wS < (sec2T+sec2H-wH)){
 
-                //     for(let i=0; i<self.sec1Img.length; i++) {
-                //         self.sec1Img[i].classList.add('on');
-                //     }
-                //     console.log('섹션1 실행')
-                // } else if(wS > (sec2T+sec2H-wH) && wS < (sec3T+sec3H-wH)) {
-                //     self.sec2Img.classList.add('on');
-                //     if(self.sec2Img.classList.contains('on')){
-                //         self.sec2Img.setAttribute('src','/images/sec2_prod_02_on.png')
-                //     }
-                //     console.log('섹션2 실행')
-                // } else if(wS > (sec3T+sec3H-wH) && wS < (sec4T+sec4H-wH)) {
-                //     for(let i=0; i<self.sec3Img.length; i++) {
-                //         self.sec3Img[i].classList.add('on');
-                //     }
-                //     console.log('섹션3 실행')
-                // } else if(wS > (sec4T+sec4H-wH) && wS < 1900) {
-                //     for(let i=0; i<self.sec4Img.length; i++) {
-                //         self.sec4Img[i].classList.add('on');
-                //     }
-                //     console.log('섹션4 실행')
-                // } 
-
-                var f = true;
-                if($(document).scrollTop() > 100 && $(document).scrollTop() < 500) {
-                    if(f== true) {
+                        for(let i=0; i<self.sec1Img.length; i++) {
+                            self.sec1Img[i].classList.add('on');
+                        }
+                        console.log('섹션1 실행' , wS)
+                    } else if(wS > (sec2T+sec2H-wH) && wS < (sec3T+sec3H-wH)) {
                         self.sec2Img.classList.add('on');
                         if(self.sec2Img.classList.contains('on')){
                             self.sec2Img.setAttribute('src','/images/sec2_prod_02_on.png')
                         }
-                        console.log('섹션2 실행')
-                        f = false;
+                        console.log('섹션2 실행', wS)
+                    } else if(wS > (sec3T+sec3H-wH) && wS < (sec4T+sec4H-wH)) {
+                        for(let i=0; i<self.sec3Img.length; i++) {
+                            self.sec3Img[i].classList.add('on');
+                        }
+                        console.log('섹션3 실행', wS)
+                    } else if(wS > (sec4T+sec4H-wH) && wS < 1900) {
+                        for(let i=0; i<self.sec4Img.length; i++) {
+                            self.sec4Img[i].classList.add('on');
+                        }
+                        console.log('섹션4 실행', wS)
                     }
-                }
+                }, 500);
+                
+                
             })
         },
     }
