@@ -1,0 +1,49 @@
+/* 분기마다의 폰트나 여백은 최대한 맞춰주면 좋다 */
+
+/* 실제 콘텐 + 100px */
+@media screen and (max-width: 1300px) {
+
+}
+
+/* 5px (x) */
+/* ~~~~~~~~~~~~~~~~~~~ */
+
+/* 테블릿 */
+@media screen and (max-width: 1100px) {
+  body {min-width:revert;}
+  .main_intro {position: relative; top: revert; left:revert; margin:0 40px;}
+}
+
+/* 모바일 대대적인 변화 보통
+ 1줄 or 2줄  */
+/* 모바일 에서는 타이틀 38px
+중타이틀 18
+일반 폰트 14~12
+여백 사이드 여백 15 20이정도 주면 좋습니다.
+320로 테스트 320에서 잘나오면 다잘나오는것
+
+*/
+@media screen and (max-width: 835px) {
+  /* media_wrap */
+  .header h1 {left: 20px;}
+  .menu_btn {right:20px;}
+  .swiper.slide {overflow: auto; }
+  .main_intro {padding:0 10px 40px; margin:revert;}
+  
+  .main_intro .txt02 strong {word-break: keep-all;}
+
+  .main_intro .txt_info {padding:10px 12px;}
+
+  .swiper-slide.swiper-slide-active .main_intro .btn_wrap {text-align: right; transform:translate3d(-10px, 10px, 10px);}
+  .swiper-slide.swiper-slide-active .main_intro .txt02 {margin-right:0;}
+
+}
+@media screen and (max-width: 768px) {
+  .main_intro .txt_info {padding:0 18px 0 10px;}
+}
+
+@media screen and (max-width:280px) {
+  .main_intro {padding:0 4px;}
+  .main_intro .txt02 strong {font-size:30px; padding:20px 0 14px;}
+  .main_intro .txt_info {font-size:16px; line-height:1.6; }
+}

@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>제품소개</title>
+
+	<script src="../js/jquery.min.js" charset="utf-8"></script>
+	<script src="https://unpkg.com/swiper@6.4.11/swiper-bundle.min.js"></script>
+	<script src="../js/custom.js" charset="utf-8"></script>
+
+	<link rel="shortcut icon" href="../favicon.ico">	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6.4.11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/uicons-regular-rounded.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/response.css">
+
+</head>
+
+
+<body>
+	<header>
+		<div class="header">
+			<h1><a href="/pofol_sample">제품소개</a></h1>
+			<div class="menu_btn">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="menu_bg">
+				<div class="menu_bg_inner">
+					<div class="gnb">
+						<ul>
+							<li><a href="../index.html">Main</a></li>
+							<li><a href="../sub/products.html" class="PC">제품 소개</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- menu_bg_inner -->
+			</div>
+		</div>
+	<!--   <div class="nav">
+		<ul>
+		  <li class="s1"><a href="javascript:void(0)">Mobile Web</a></li>
+		  <li class="s2"><a href="javascript:void(0)">PC Web</a></li>
+		  <li class="s3"><a href="javascript:void(0)">Responsive Web</a></li>
+		  <li class="s4"><a href="javascript:void(0)">Contact</a></li>
+		</ul>
+	  </div> -->
+	</header>
+	<div class="container">
+		<div class="wrap">
+			<article>
+				<div class="item_list02">
+					<ul>
+						<li>
+							<a href="" class="item">
+								<div class="img_wrap"></div>
+								<div class="txt_wrap">
+									<h5 class="tit">제품명</h5>
+									<p class="desc">제품소개..........</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="" class="item">
+								<div class="img_wrap"></div>
+								<div class="txt_wrap">
+									<h5 class="tit">제품명</h5>
+									<p class="desc">제품소개..........</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="" class="item">
+								<div class="img_wrap"></div>
+								<div class="txt_wrap">
+									<h5 class="tit">제품명</h5>
+									<p class="desc">제품소개..........</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="" class="item">
+								<div class="img_wrap"></div>
+								<div class="txt_wrap">
+									<h5 class="tit">제품명</h5>
+									<p class="desc">제품소개..........</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="" class="item">
+								<div class="img_wrap"></div>
+								<div class="txt_wrap">
+									<h5 class="tit">제품명</h5>
+									<p class="desc">제품소개..........</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+	</div>
+
+	<!--popup -->
+	<div class="popup layer">
+		<div class="pop_dim"></div>
+			<div class="pop_layer">
+				<div class="pop_header">
+					<h3>QR코드</h3>
+				</div>
+				<div class="pop_conts">
+					<div class="article_qrcode">
+						<section class="">
+							<img src="" alt="QR코드">
+							테스트 테스트
+						</section>
+					</div>
+				</div>
+				<div class="pop_footer">
+					<button type="button" class="btn_close"><span class="blind">닫기</span></button>
+				</div>
+			</div>
+	</div>
+	<script>
+		const popup = document.querySelector(".popup");
+		const closeBtn = document.querySelector(".btn_close");
+		function popOpen (val) {			
+			if(val == "layer") {
+				popup.classList.add("open");
+			}
+		}
+		
+		closeBtn.addEventListener("click", function(){
+			popup.classList.remove("open");
+		})
+	</script>
+</body>
+</html>
